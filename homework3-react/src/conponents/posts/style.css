@@ -1,0 +1,15 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.details{
+    width: 500px;
+    border: 2px solid black;
+    background-color: lightyellow;
+    height: fit-content;
+}
+.info{
+    width: fit-content;
+    border: 2px solid black;
+    background-color: lightyellow;
+}

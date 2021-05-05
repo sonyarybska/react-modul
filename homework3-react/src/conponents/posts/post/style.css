@@ -1,0 +1,14 @@
+.one{
+    background-color: black;
+    color: yellow;
+    margin: 10px;
+    font-size: 18px;
+    width: 100%;
+
+}
+.still{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 10px;
+}
