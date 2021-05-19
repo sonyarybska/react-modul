@@ -1,4 +1,4 @@
-import './App.css';
+ import './App.css';
 import Films from "./cpmponents/component1";
 
 const films = [

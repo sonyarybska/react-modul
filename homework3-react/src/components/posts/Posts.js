@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react";
 import {Post} from "./post/Post";
 import './style.css'
+import {getUsers} from "../../services/api";
 
 export function Posts() {
 
     let [posts, setPosts] = useState([]);
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(value => value.json())
-            .then(data => setPosts(data))
-    }, [])
+
+    useEffect(()=>{
+        getUsers().then(value => setPosts([...value.data]));
+    },[])
 
     let [singlePost, setSinglePost] = useState(null);
 
@@ -27,7 +27,8 @@ export function Posts() {
             </div>
             <div className={'details'}>
                 {
-                    singlePost ? <h1> UserID: {singlePost.userId} Body: {singlePost.body}</h1>:<h1>Posts are undefined</h1>
+                    singlePost ? <h1> UserID: {singlePost.userId} Body: {singlePost.body}</h1> :
+                        <h1>Posts are undefined</h1>
                 }
             </div>
         </div>
