@@ -8,10 +8,10 @@ import {
 import './App.css';
 import {Characters} from "./components/characters/Characters";
 import {Inventory} from "./components/inventory/Inventory";
-import {CharacterDetails} from "./components/characters/characterDetails/CharacterDetails";
 import {InventoryDetails} from "./components/inventory/inventoryDetails/InventoryDetails";
 import {Episodes} from "./components/episodes/Episodes";
 import {EpisodesDetails} from "./components/episodes/EpisodesDetails/EpisodesDetails";
+import {CharacterDetails} from "./components/characterDetails/CharacterDetails";
 
 function App() {
 
@@ -25,10 +25,7 @@ function App() {
                     <Route exact={true} path={'/characters'} render={(props) => {
                         return <Characters {...props}/>
                     }}/>
-                    <Route exact={true} path={'/characters/:id'} render={(props) => {
-                        let {match: {params: {id}}} = props;
-                        return <CharacterDetails characterID={id}/>
-                    }}/>
+
                     <Route exact={true} path={'/inventory'} render={(props) => {
                         return <Inventory{...props}/>
                     }}/>
@@ -40,7 +37,7 @@ function App() {
                     <Route exact={true} path={'/episodes'} render={(props) => <Episodes {...props}/>}/>
                     <Route exact={true} path={'/episodes/:id'} render={(props) => {
                         let {match: {params: {id}}} = props;
-                        return <EpisodesDetails episodeID={id}/>
+                        return <EpisodesDetails {...props} episodeID={id}/>
                     }}/>
                     }/>
                 </Switch>
