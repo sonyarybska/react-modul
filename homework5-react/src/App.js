@@ -15,8 +15,11 @@ function App() {
                 <Link to={'/users'}><h2>Users</h2></Link>
                 <Link to={'/posts'}><h2>Posts</h2></Link>
                 <Switch>
-                    <Route exact={true} path={'/users'} render={(props) => <Users {...props}/>}/>
-                    <Route exact={true} path={'/posts'} render={() => <Posts/>}/>
+
+                    <Route  path={'/users'} render={(props) => <Users {...props}/>}/>
+                    <Route  path={'/posts'} render={(props) => <Posts {...props}/>}/>
+
+
                 </Switch>
             </div>
         </Router>
