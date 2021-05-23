@@ -5,11 +5,10 @@ export function Character({one,url}){
         return '';
     }
     return(
-        <div className={'charac'}>
+        <div >
             {
-              <Link to={url+'/'+one.id} params={{post:one}}><h3>{ one.occupation}</h3></Link>
+              <Link to={url+ '/'+ one.id} params={{post:one}}><h3>{ one.occupation}</h3></Link>
             }
-
         </div>
     )
 }

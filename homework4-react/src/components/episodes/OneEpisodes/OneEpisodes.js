@@ -5,6 +5,7 @@ export function OneEpisodes({one,url}){
         <div>
             {
                 <Link to={url+'/'+one.id}>{one.title}</Link>
+
             }
         </div>
     )
