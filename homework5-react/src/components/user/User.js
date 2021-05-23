@@ -5,7 +5,7 @@ export function User(props){
     return(
         <div>
 
-            {one.id}-{one.name}- <Link to={{pathname:url+'/'+one.id,state:one}}><button>Details</button></Link>
+            {one.id}-{one.name}- <Link to={{pathname:url+'/'+one.id+'/posts',state:one}}><button>UserPosts</button></Link>
 
 
         </div>

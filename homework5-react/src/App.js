@@ -16,9 +16,8 @@ function App() {
                 <Link to={'/posts'}><h2>Posts</h2></Link>
                 <Switch>
 
-                    <Route  path={'/users'} render={(props) => <Users {...props}/>}/>
-                    <Route  path={'/posts'} render={(props) => <Posts {...props}/>}/>
-
+                    <Route path={'/users'} render={(props) => <Users {...props}/>}/>
+                    <Route path={'/posts'} render={(props) => <Posts {...props}/>}/>
 
                 </Switch>
             </div>

@@ -3,7 +3,7 @@ import {User} from "../user/User";
 import {
     Route,
 } from "react-router-dom";
-import {UserDetails} from "../user-details/UserDetails";
+import {UserPosts} from "../UserPosts/UserPosts";
 
 export function Users(props) {
     let {match: {url}} = props;
@@ -20,7 +20,7 @@ export function Users(props) {
     return (
             <div>
                 {users.map(value => <User key={value.id} one={value} url={url}/>)}
-                <Route path={'/users/:id'} component={UserDetails}/>
+                <Route path={'/users/:id/posts'} render={(props)=><UserPosts url={url} {...props}/>}/>
 
             </div>
 
